@@ -4,19 +4,10 @@ from .backend.backend import State
 
 
 def index() -> rx.Component:
-    return rx.vstack(
-        rx.flex(
-            rx.box(main_table(), width=["100%", "100%", "100%", "60%"]),
-            spacing="6",
-            width="100%",
-            flex_direction=["column", "column", "column", "row"],
-        ),
-        height="100vh",
+    return rx.container(
+        main_table(),
+        size='3',
         bg=rx.color("accent", 1),
-        width="100%",
-        spacing="6",
-        padding_x=["1.5em", "1.5em", "3em"],
-        padding_y=["1em", "1em", "2em"],
     )
 
 

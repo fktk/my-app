@@ -1,13 +1,11 @@
+import datetime
 import reflex as rx
 
 
-class Customer(rx.Model, table=True):  # type: ignore
-    """The customer model."""
+class News(rx.Model, table=True):  # type: ignore
 
-    customer_name: str
-    email: str
-    age: int
-    gender: str
-    location: str
-    job: str
-    salary: int
+    organization: str
+    title: str
+    upload_date: datetime.datetime
+    url: str
+    body: str
